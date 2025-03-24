@@ -1,0 +1,30 @@
+.Quan {
+    width: 50px;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif; /* tipo da fonte */
+    }
+    
+    table {
+        width: 500px; /*Tamanho da tabela*/
+        border-collapse: collapse; /*Elimina espaço entre as celulas*/
+    }
+
+    th, td {
+        border: 2px solid black;/*Espeçura e estilo da borda da tabela*/
+        padding: 10px;/*Distancia entre conteudos e as bordas*/
+        background-color: purple;
+    }
+    
+    caption {
+        font-size: 22px; /*Tamanho da fonte do titulo da tabela*/
+        font-weight: bold;/*Peso ou intencidade da fonte*/
+        padding: 10px;/*Distancia entre conteudos e as bordas*/
+        background-color: black;/*Cor do fundo do titulo da tabela*/
+    }
+    
+    
+tr{
+    text-align: center;
+}

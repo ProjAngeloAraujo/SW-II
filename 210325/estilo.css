@@ -1,0 +1,42 @@
+.Quan {
+width: 50px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* tipo da fonte */
+}
+
+table {
+    width: 500px; /*Tamanho da tabela*/
+    border-collapse: collapse; /*Elimina espaço entre as celulas*/
+}
+
+th, td {
+    border: 1px red;/*Espeçura e estilo da borda da tabela*/
+    padding: 10px;/*Distancia entre conteudos e as bordas*/
+}
+
+caption {
+    font-size: 22px; /*Tamanho da fonte do titulo da tabela*/
+    font-weight: bold;/*Peso ou intencidade da fonte*/
+    padding: 10px;/*Distancia entre conteudos e as bordas*/
+    background-color: red;/*Cor do fundo do titulo da tabela*/
+}
+
+thead, tfoot {
+    background-color: aliceblue;/*Cor do fundo do cabeçario e do rodapé da tabela*/
+    color: brown;/*Cor da fonte*/
+}
+
+tbody > tr:nth-child(odd) { /*Limhas impares*/
+background-color: darkcyan;/*Cor do fundo da linha*/
+}
+
+tbody > tr:nth-child(even) { /*Limhas impares*/
+    background-color: darkcyan;/*Cor do fundo da linha*/
+    }
+
+th.num {
+    text-align: right; /*Alinhamento do texto de class "num"*/
+}
+
