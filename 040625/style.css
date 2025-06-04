@@ -15,7 +15,7 @@
 
 .Formulario{
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(134, 12, 199, 0.35) 0px 5px 15px;
     padding: 15px;
     text-align: center;
 }
@@ -50,17 +50,17 @@ label{
 }
 
 #button1{
-    background-color: rgb(2, 184, 2);
+    background-color: blueviolet;
     transition: 0.5s;
 }
 #button1:hover{
-    background-color: rgb(3, 130, 3);
+    background-color: rgb(108, 34, 177);
 }
 
 #button2{
-    background-color: cornflowerblue;
+    background-color: darkturquoise;
     transition: 0.5s;
 }
 #button2:hover{
-    background-color: rgb(67, 98, 156);
+    background-color: rgb(2, 149, 151);
 }
