@@ -10,21 +10,46 @@
     <div class="Container">
         <div class="Formulario">
             <h2>Login</h2>
-            <form>
+            <form id="loginForm">
                 <label for="">
                     E-mail:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite seu E-mail" required>
+                    <input type="text" class="campo" id="email" placeholder="Digite seu E-mail" required>
                 </label>
                 <label>
                     Senha:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite sua senha" required>
+                    <input type="text" class="campo" id="senha" placeholder="Digite sua senha" required>
                 </label>
                 <button class="button" id="button1">Entrar</button>
-                <button class="button" id="button2">Cadastrar-se</button>
+                <button class="button" id="button2" onclick="window.location.href='cadastro.html'">Cadastrar-se</button>
             </form>
         </div>
     </div>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value;
+        
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+            // Valida o formato do e-mail
+            if (!emailRegex.test(email)) {
+                alert("Por favor, insira um e-mail válido.");
+                event.preventDefault();
+                return;
+            }
+        
+            // Verifica se a senha não está vazia
+            if (senha.length === 0) {
+                alert("Por favor, insira sua senha.");
+                event.preventDefault();
+                return;
+            }
+        
+            // Se passar nas validações, o formulário será enviado normalmente
+        });
+        </script>        
 </body>
 </html>

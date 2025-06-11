@@ -10,41 +10,100 @@
     <div class="Container">
         <div class="Formulario">
             <h2>Cadastro</h2>
-            <form>
+            <form id="cadastroForm">
                 <label>
                     Nome Completo:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite seu nome" required>
+                    <input type="text" class="campo"  placeholder="Digite seu nome" required>
                 </label>
                 <label>
                     E-mail:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite seu E-mail" required>
+                    <input type="text" class="campo" id="email" placeholder="Digite seu E-mail" required>
                 </label>
                 <label>
                     Telefone:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite seu telefone" required>
+                    <input type="text" class="campo" id="telefone" placeholder="Digite seu telefone" required>
                 </label>
                 <label>
                     CPF:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite seu CPF" required>
+                    <input type="text" class="campo" id="cpf" placeholder="Digite seu CPF" required>
                 </label>
                 <label>
                     Senha:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite sua senha" required>
+                    <input type="text" class="campo" id="senha" placeholder="Digite sua senha" required>
                 </label>
                 <label>
                     Confirmar Senha:
                     <br>
-                    <input type="text" class="campo" placeholder="Digite novamente sua senha" required>
+                    <input type="text" class="campo" id="confirmaSenha" placeholder="Digite novamente sua senha" required>
                 </label>
                 <button class="button" id="button1">Cadastrar-se</button>
-                <button class="button" id="button2">Fazer login</button>
+                <button class="button" id="button2" onclick="window.location.href='login.html'">Fazer login</button>
             </form>
         </div>
     </div>
+
+    <script>
+        // Adiciona um listener para o evento 'submit' do formulário com id "cadastroForm"
+        // A função será executada sempre que o usuário tentar enviar o formulário
+        document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+      
+          // Captura os valores dos campos do formulário e remove espaços em branco extras
+          const email = document.getElementById("email").value.trim();
+          const telefone = document.getElementById("telefone").value.trim();
+          const cpf = document.getElementById("cpf").value.trim();
+          const senha = document.getElementById("senha").value;
+          const confirmaSenha = document.getElementById("confirmaSenha").value;
+      
+          // Define expressões regulares para validação dos campos
+      
+          // Validação de e-mail no formato padrão (ex: nome@dominio.com)
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+          // Validação de telefone brasileiro:
+          // Pode conter ou não parênteses no código de área,
+          // o espaço após o DDD é item opcional no número
+          // Exemplo válido: (11) 91111-2222 ou 11911112222
+          const telefoneRegex = /^(\(?\d{2}\)?\s?)?\d{4,5}-?\d{4}$/;
+      
+          // Validação de CPF, deve conter exatamente 11 dígitos numéricos consecutivos
+          // Sem pontos, hífens ou espaços
+          const cpfRegex = /^\d{11}$/;
+      
+          // Valida o e-mail digitado
+          if (!emailRegex.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            event.preventDefault(); // Impede o envio do formulário para correção
+            return; // Sai da função para que o usuário corrija
+          }
+      
+          // Valida o telefone digitado
+          if (!telefoneRegex.test(telefone)) {
+            alert("Por favor, insira um número de telefone válido. Ex: (11) 91111-2222");
+            event.preventDefault(); // Impede o envio do formulário
+            return; // Sai da função para que o usuário corrija
+          }
+      
+          // Valida o CPF digitado
+          if (!cpfRegex.test(cpf)) {
+            alert("O CPF deve conter exatamente 11 números, sem pontos ou traços.");
+            event.preventDefault(); // Impede o envio
+            return; // Sai da função para que o usuário corrija
+          }
+      
+          // Verifica se a senha e a confirmação de senha são idênticas
+          if (senha !== confirmaSenha) {
+            alert("As senhas não coincidem.");
+            event.preventDefault(); // Impede o envio do formulário
+            return; // Sai da função para que o usuário corrija
+          }
+      
+          // Se chegar aqui, todas as validações passaram e o formulário será enviado normalmente
+        });
+      </script>      
 </body>
 </html>
