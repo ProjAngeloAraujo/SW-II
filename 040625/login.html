@@ -10,19 +10,19 @@
     <div class="Container">
         <div class="Formulario">
             <h2>Login</h2>
-            <form id="loginForm">
+            <form action="login.php" method="post" id="loginForm">
                 <label for="">
                     E-mail:
                     <br>
-                    <input type="text" class="campo" id="email" placeholder="Digite seu E-mail" required>
+                    <input type="text" name="email" class="campo" id="email" placeholder="Digite seu E-mail" required>
                 </label>
                 <label>
                     Senha:
                     <br>
-                    <input type="text" class="campo" id="senha" placeholder="Digite sua senha" required>
+                    <input type="text" name="senha" class="campo" id="senha" placeholder="Digite sua senha" required>
                 </label>
-                <button class="button" id="button1">Entrar</button>
-                <button class="button" id="button2" onclick="window.location.href='cadastro.html'">Cadastrar-se</button>
+                <button class="button" id="button1" type="submit">Entrar</button>
+                <button class="button" id="button2" type="button" onclick="window.location.href='cadastro.html'">Cadastrar-se</button>
             </form>
         </div>
     </div>

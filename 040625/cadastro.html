@@ -10,39 +10,39 @@
     <div class="Container">
         <div class="Formulario">
             <h2>Cadastro</h2>
-            <form id="cadastroForm">
+            <form action="cadastro.php" method="post" id="cadastroForm">
                 <label>
                     Nome Completo:
                     <br>
-                    <input type="text" class="campo"  placeholder="Digite seu nome" required>
+                    <input type="text" name="nome" class="campo"  placeholder="Digite seu nome" required>
                 </label>
                 <label>
                     E-mail:
                     <br>
-                    <input type="text" class="campo" id="email" placeholder="Digite seu E-mail" required>
+                    <input type="text" name="email" class="campo" id="email" placeholder="Digite seu E-mail" required>
                 </label>
                 <label>
                     Telefone:
                     <br>
-                    <input type="text" class="campo" id="telefone" placeholder="Digite seu telefone" required>
+                    <input type="text" name="telefone" class="campo" id="telefone" placeholder="Digite seu telefone" required>
                 </label>
                 <label>
                     CPF:
                     <br>
-                    <input type="text" class="campo" id="cpf" placeholder="Digite seu CPF" required>
+                    <input type="text" name="cpf" class="campo" id="cpf" placeholder="Digite seu CPF" required>
                 </label>
                 <label>
                     Senha:
                     <br>
-                    <input type="text" class="campo" id="senha" placeholder="Digite sua senha" required>
+                    <input type="text" name="senha" class="campo" id="senha" placeholder="Digite sua senha" required>
                 </label>
                 <label>
                     Confirmar Senha:
                     <br>
                     <input type="text" class="campo" id="confirmaSenha" placeholder="Digite novamente sua senha" required>
                 </label>
-                <button class="button" id="button1">Cadastrar-se</button>
-                <button class="button" id="button2" onclick="window.location.href='login.html'">Fazer login</button>
+                <button class="button" id="button1" type="submit">Cadastrar-se</button>
+                <button class="button" id="button2" type="button" onclick="window.location.href='login.html'">Fazer login</button>
             </form>
         </div>
     </div>
