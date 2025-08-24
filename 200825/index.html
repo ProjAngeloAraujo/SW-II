@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Loja</title>
+</head>
+<body>
+    <h1>Catálogo de Produtos</h1>
+
+    <div class="produtos-container">
+        <!-- Produto 1 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/1.webp"></div>
+            <div class="descricao">Tênis NBA Nike Jump Academy Masculino - Preto+Branco</div>
+            <div class="preco">R$ 379,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/2.webp"></div>
+            <div class="descricao">Tênis NBA Nike Jordan Luka 4 Masculino - Cinza+Azul</div>
+            <div class="preco">R$ 769,49</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/3.webp"></div>
+            <div class="descricao">Tênis de Basquete Masculino Under Armour Bankshot - Branco</div>
+            <div class="preco">R$ 329,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/4.webp"></div>
+            <div class="descricao">Tênis Puma MB.04 Iridescent Hornets - Pink+Azul</div>
+            <div class="preco">R$ 749,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/5.webp"></div>
+            <div class="descricao">Tênis NBA Nike Air Zoom G.T. Cut Academy Masculino - Laranja+Branco</div>
+            <div class="preco">R$ 493,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/6.webp"></div>
+            <div class="descricao">Tênis NBA Nike JA 2 Masculino - Bege+Preto</div>
+            <div class="preco">R$ 759,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 7 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/7.webp"></div>
+            <div class="descricao">Tênis NBA Nike Jordan Tatum 3 Masculino - Azul</div>
+            <div class="preco">R$ 769,49</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 8 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/8.webp"></div>
+            <div class="descricao">Tênis NBA Nike Giannis Immortality 4 Masculino - Branco+Laranja</div>
+            <div class="preco">R$ 550,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 9 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/9.webp"></div>
+            <div class="descricao">Tênis Couro Puma NBA Scoot 1 Grey Ice - Cinza</div>
+            <div class="preco">R$ 549,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 10 -->
+        <div class="produto">
+            <div class="imagem-produto"><img src="img/10.webp"></div>
+            <div class="descricao">Tênis NBA Nike Lebron Witness VIII Masculino - Branco+Azul</div>
+            <div class="preco">R$ 649,99</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Botão carrinho -->
+    <button id="btn-carrinho" aria-label="Abrir carrinho">
+        🛒
+        <span id="contador-quantidade">0</span>
+    </button>
+
+
+    <!-- Aba lateral -->
+    <aside id="carrinho-lateral" aria-label="Carrinho de compras">
+        <h2>Seu Carrinho</h2>
+        <div id="itens-carrinho"></div>
+        <div id="total-carrinho">Total: R$ 0,00</div>
+        <button id="btn-finalizar">Finalizar Compra</button>
+    </aside>
+
+</body>
+
+</html>
