@@ -107,3 +107,24 @@ function inicializarCarrinho() {
   atualizarCarrinho();
 }
 inicializarCarrinho();
+
+// Carrossel
+const carrossel = document.querySelector('.carrossel');
+const imagens = document.querySelectorAll('.carrossel img');
+const btnAnterior = document.querySelector('.seta-anterior');
+const btnProximo = document.querySelector('.seta-proximo');
+let indiceAtual = 0;
+
+function atualizarCarrossel() {
+    carrossel.style.transform = `translateX(-${indiceAtual * 100}%)`;
+}
+
+btnAnterior.addEventListener('click', () => {
+    indiceAtual = (indiceAtual === 0) ? imagens.length - 1 : indiceAtual - 1;
+    atualizarCarrossel();
+});
+
+btnProximo.addEventListener('click', () => {
+    indiceAtual = (indiceAtual === imagens.length - 1) ? 0 : indiceAtual + 1;
+    atualizarCarrossel();
+});
