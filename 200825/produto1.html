@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Produto</title>
+  <link rel="stylesheet" href="produto.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="header" class="header">
+    <img src="img/Logo.png" alt="Logo">
+  </div>
+
+  <div class="conteudo">
+    <div class="container">
+    <!-- Container principal que agrupa a área esquerda (galeria) e direita (informações do produto) -->
+
+    <div class="left">
+      <!-- Coluna da esquerda, destinada à imagem principal e galeria de miniaturas -->
+
+      <img id="product-img" src="img/1.webp" alt="Produto">
+
+      <div class="mini-gallery">
+        <img src="img/2.webp" onclick="changeImage(this.src)">
+        <img src="img/3.webp" onclick="changeImage(this.src)">
+        <img src="img/4.webp" onclick="changeImage(this.src)">
+        <img src="img/5.webp" onclick="changeImage(this.src)">
+      </div>
+    </div>
+
+    <div class="right">
+      <!-- Coluna da direita, contendo as informações do produto -->
+
+      <div class="produto">
+        <!-- 🔑 precisa dessa div com classe produto -->
+
+        <h1 class="descricao">Tênis NBA Nike Jump Academy Masculino - Preto+Branco</h1>
+
+        <div class="rating">★ ★ ★ ★ ★ (2.565 avaliações)</div>
+
+        <div class="preco">R$ 379,99</div>
+
+        <div class="description">
+          Tênis de basquete masculino, ideal para performance e conforto em quadra.
+          <br><br>
+          Marca: Nike <br>
+          Modelo: Jump Academy <br>
+          Material: Mesh e borracha antiderrapante
+        </div>
+
+        <div class="buttons">
+          <button class="botao-carrinho">Adicionar ao Carrinho</button>
+          <button class="btn-buy" onclick="buyNow()">Comprar Agora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Botão carrinho -->
+  <button id="btn-carrinho" aria-label="Abrir carrinho">
+    🛒
+    <span id="contador-quantidade">0</span>
+  </button>
+
+  <!-- Aba lateral -->
+  <aside id="carrinho-lateral" aria-label="Carrinho de compras">
+    <h2>Seu Carrinho</h2>
+    <div id="itens-carrinho"></div>
+    <div id="total-carrinho">Total: R$ 0,00</div>
+    <button id="btn-finalizar">Finalizar Compra</button>
+  </aside>
+</body>
+</html>

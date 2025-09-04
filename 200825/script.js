@@ -128,3 +128,16 @@ btnProximo.addEventListener('click', () => {
     indiceAtual = (indiceAtual === imagens.length - 1) ? 0 : indiceAtual + 1;
     atualizarCarrossel();
 });
+
+function changeImage(src) {
+  // Troca a imagem principal pela miniatura clicada
+  document.getElementById("product-img").src = src;
+}
+
+function addToCart() {
+  alert("Produto adicionado ao carrinho!");
+}
+
+function buyNow() {
+  alert("Redirecionando para o pagamento...");
+}
