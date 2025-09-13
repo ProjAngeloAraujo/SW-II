@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Loja</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <div class="produtos-container">
         <!-- Produto 1 -->
         <div class="produto">
-            <div class="imagem-produto"><img src="img/1.webp"></div>
+            <div class="imagem-produto"><img src="img/1.webp" onclick="window.location.href='produto1.html'"></div>
             <div class="descricao">Tênis NBA Nike Jump Academy Masculino - Preto+Branco</div>
             <div class="preco">R$ 379,99</div>
             <button class="botao-carrinho">Adicionar ao Carrinho</button>
@@ -20,7 +21,7 @@
 
         <!-- Produto 2 -->
         <div class="produto">
-            <div class="imagem-produto"><img src="img/2.webp"></div>
+            <div class="imagem-produto"><img src="img/2.webp" onclick="window.location.href='produto2.html'"></div>
             <div class="descricao">Tênis NBA Nike Jordan Luka 4 Masculino - Cinza+Azul</div>
             <div class="preco">R$ 769,49</div>
             <button class="botao-carrinho">Adicionar ao Carrinho</button>
@@ -28,7 +29,7 @@
 
         <!-- Produto 3 -->
         <div class="produto">
-            <div class="imagem-produto"><img src="img/3.webp"></div>
+            <div class="imagem-produto"><img src="img/3.webp" onclick="window.location.href='produto3.html'"></div>
             <div class="descricao">Tênis de Basquete Masculino Under Armour Bankshot - Branco</div>
             <div class="preco">R$ 329,99</div>
             <button class="botao-carrinho">Adicionar ao Carrinho</button>
@@ -89,6 +90,22 @@
             <div class="preco">R$ 649,99</div>
             <button class="botao-carrinho">Adicionar ao Carrinho</button>
         </div>
+
+         <!-- Produto 11 -->
+         <div class="produto">
+            <div class="imagem-produto"><img src="img/11.webp"></div>
+            <div class="descricao">Tênis Adidas Subzone - Preto+Vermelho</div>
+            <div class="preco">R$ 351,49</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
+
+         <!-- Produto 12 -->
+         <div class="produto">
+            <div class="imagem-produto"><img src="img/12.webp"></div>
+            <div class="descricao">Tênis NBA Nike Lebron NXXT Genisus QS Masculino - Violeta+Azul Claro</div>
+            <div class="preco">R$ 1.073,49</div>
+            <button class="botao-carrinho">Adicionar ao Carrinho</button>
+        </div>
     </div>
 
     <!-- Botão carrinho -->
@@ -96,7 +113,6 @@
         🛒
         <span id="contador-quantidade">0</span>
     </button>
-
 
     <!-- Aba lateral -->
     <aside id="carrinho-lateral" aria-label="Carrinho de compras">
@@ -108,6 +124,16 @@
         <button id="btn-finalizar">Finalizar Compra</button>
     </aside>
 
-</body>
+    <div class="carrossel-container">
+        <div class="carrossel">
+            <img src="img/banner1.png" alt="1">
+            <img src="img/banner2.png" alt="2">
+            <img src="img/banner3.png" alt="3">
+            <img src="img/banner4.png" alt="4">
+        </div>
+        <button class="seta seta-anterior">&#10094;</button>
+        <button class="seta seta-proximo">&#10095;</button>
+    </div>
 
+</body>
 </html>
