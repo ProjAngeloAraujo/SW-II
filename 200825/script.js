@@ -22,7 +22,11 @@ botoesAdicionar.forEach((botao, index) => {
   botao.addEventListener('click', () => {
     const produto = botao.closest('.produto');
     const descricao = produto.querySelector('.descricao').textContent.trim();
-    const precoTexto = produto.querySelector('.preco').textContent.replace('R$', '').replace('.', '').replace(',', '.').trim();
+    const precoTexto = produto.querySelector('.preco').textContent
+      .replace('R$', '')
+      .replace('.', '')
+      .replace(',', '.')
+      .trim();
     const preco = parseFloat(precoTexto);
 
     if (carrinhoProdutos[index]) {
@@ -33,6 +37,15 @@ botoesAdicionar.forEach((botao, index) => {
 
     atualizarCarrinho();
     carrinho.classList.add('aberto');
+
+    // 🎉 Dispara confete
+    if (typeof confetti === "function") {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
   });
 });
 
@@ -119,15 +132,17 @@ function atualizarCarrossel() {
     carrossel.style.transform = `translateX(-${indiceAtual * 100}%)`;
 }
 
-btnAnterior.addEventListener('click', () => {
-    indiceAtual = (indiceAtual === 0) ? imagens.length - 1 : indiceAtual - 1;
-    atualizarCarrossel();
-});
+if (btnAnterior && btnProximo) {
+  btnAnterior.addEventListener('click', () => {
+      indiceAtual = (indiceAtual === 0) ? imagens.length - 1 : indiceAtual - 1;
+      atualizarCarrossel();
+  });
 
-btnProximo.addEventListener('click', () => {
-    indiceAtual = (indiceAtual === imagens.length - 1) ? 0 : indiceAtual + 1;
-    atualizarCarrossel();
-});
+  btnProximo.addEventListener('click', () => {
+      indiceAtual = (indiceAtual === imagens.length - 1) ? 0 : indiceAtual + 1;
+      atualizarCarrossel();
+  });
+}
 
 function changeImage(src) {
   // Troca a imagem principal pela miniatura clicada
